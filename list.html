@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Budget List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Emmanuel's Budget List</h2>
+        <p id="welcome"></p>
+
+        <!-- Logout button -->
+        <button id="logoutBtn" class="btn" style="margin-bottom: 20px;">Logout</button>
+
+        <!-- Add Item Form -->
+        <form id="budgetForm">
+            <input type="text" id="itemName" placeholder="Item name" required>
+            <input type="number" id="itemQty" placeholder="Quantity" min="1" required>
+            <input type="number" id="itemPrice" placeholder="Price per item" step="0.01" required>
+        <!--adding a priority form by Tendai-->
+            <select id="itemPriority" required style="width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 10px; background: rgba(255, 255, 255, 0.2); color: #fff; border: none; outline: none;">
+                <option value="" disabled selected style="background-color: #333;">Select Priority</option>
+                <option value="high" style="background-color: #333;">High Priority (Red)</option>
+                <option value="medium" style="background-color: #333;">Medium Priority (Orange)</option>
+                <option value="low" style="background-color: #333;">Low Priority (Green)</option>
+            </select>
+
+            <button type="submit" class="btn">Add Item</button>
+        </form>
+
+        <!-- Budget List -->
+        <ul id="budgetList"></ul>
+
+        <!-- Total -->
+        <h3>Total Budget: <span id="totalAmount">ZMW 0.00</span></h3>
+    </div>
+
+    <script src="list.js"></script>
+</body>
+
+</html>
